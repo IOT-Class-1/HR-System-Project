@@ -1,7 +1,6 @@
 package com.example.HR.model;
 
 //Bu benim model sınıfım
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -12,7 +11,6 @@ public class Employee {
 
     @Id // Bu anotasyon, 'id' alanının birincil anahtar olduğunu belirtir.
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Bu, 'id' alanının otomatik olarak artırılacağını belirtir.
-
     private Long Id; // Çalışanın benzersiz kimliği
     private String name; // Çalışanın adı
     private String position; // Çalışanın pozisyonu
