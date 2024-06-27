@@ -31,11 +31,18 @@ public class EmployeeController {
         return  employeeService.getEmployeeById(id);
     }
 
+
     @PutMapping("/{id}") /* Belitilen kimlikteki çalışan bilgilerini bu metot
     ile update/güncelliyoruz.*/
     public Employee updateEmployee(@PathVariable Long id, @RequestBody Employee employeeDetails){
         return employeeService.updateEmployee(id, employeeDetails);
     }
 
-    //ToDo: Delete metodu kaldı.
+    @DeleteMapping("/fire/{id}")
+    public void fireEmployees(@PathVariable Long id) {
+        employeeService.fireEmployee(id);
+    }
 }
+
+
+// Config ---> Configuration --> ayarlamak
