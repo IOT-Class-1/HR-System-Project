@@ -13,12 +13,18 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Bu, 'id' alanının otomatik olarak artırılacağını belirtir.
     private Long Id; // Çalışanın benzersiz kimliği
 
-    private String name; // Çalışanın adı
-    private String position; // Çalışanın pozisyonu
+    private String firstName; // Çalışanın adı
+
+    private String lastName; // Çalışanın soyadı
+
+    private String jobTitle; // Çalışanın pozisyonu
+
+    private String iban; // Çalışana ait iban no
 
     //Getter ve Setter metotları
     //Getter, özel alanların değerini okumak için kullanılır.
     //Setter, özel alanların değerini ayarlamak için kullanılır.
+
 
     public Long getId() {
         return Id;
@@ -28,19 +34,35 @@ public class Employee {
         Id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getPosition() {
-        return position;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setPosition(String position) {
-        this.position = position;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+
+    public void setIban(String iban) {
+        this.iban = iban;
     }
 }

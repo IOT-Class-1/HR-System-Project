@@ -41,9 +41,11 @@ public class EmployeeService { // Bu anotasyon, bu sınıfın bir servis sınıf
         // orElse yani if döngüsünün else kısmı gibi düşünebiliriz. Aradığımız çalışan bulunumadığı durumlarda
         // Kullanıcıya böyle bir metin gösteriyoruz.
 
-        employee.setName(employeeDetails.getName());
-        employee.setPosition(employeeDetails.getPosition());
-
+        //employee.setName(employeeDetails.getName());
+        employee.setFirstName(employeeDetails.getFirstName());
+        employee.setLastName(employeeDetails.getLastName());
+        employee.setJobTitle(employeeDetails.getJobTitle());
+        employee.setIban(employeeDetails.getIban());
         return employeeRepository.save(employee);
     }
 
